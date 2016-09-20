@@ -3,5 +3,5 @@ Test task to Willey by Selenium Webdriver
 
 ### Stack:
 * Java
-* Selenium
+* Selenium WebDriver
 * Chromedriver v.2.24
