@@ -184,8 +184,8 @@ public class WilleyTestMain {
         try {
             WebElement emailAddressUnput = driver.findElement(By.name("EmailAddress"));
             driver.findElement(By.name("submitButton")).click();
-            Alert alert1 = driver.switchTo().alert();
-            if (alert1.getText().contains("Please enter email address")) {
+            Alert alertForCleanEmailField = driver.switchTo().alert();
+            if (alertForCleanEmailField.getText().contains("Please enter email address")) {
                 System.out.println("Action 7:\n" +
                         "Find “Sign up to receive Wiley updates” line and input field next to it. Do not enter anything and click arrow button\n" +
                         "Check that alert appeared\n" +
@@ -194,11 +194,11 @@ public class WilleyTestMain {
                 countCheck++;
             } else {
                 System.out.println("Action 7:\n" +
-                        "the alert text is not “Please enter email address” its " + "“" + alert1.getText() + "”\n" +
+                        "the alert text is not “Please enter email address” its " + "“" + alertForCleanEmailField.getText() + "”\n" +
                         "Action 7 FAILED!\n");
                 countFail++;
             }
-            alert1.accept();
+            alertForCleanEmailField.accept();
         } catch (Exception e) {
             System.out.println("Action 7 FAILED!\n");
             countFail++;
@@ -210,9 +210,9 @@ public class WilleyTestMain {
             WebElement emailAddressUnput = driver.findElement(By.name("EmailAddress"));
             emailAddressUnput.sendKeys("invalidemail.ru");
             driver.findElement(By.name("submitButton")).click();
-            Alert alert2 = driver.switchTo().alert();
+            Alert alertForInvalidEmailField = driver.switchTo().alert();
 
-            if (alert2.getText().contains("Invalid email address.")) {
+            if (alertForInvalidEmailField.getText().contains("Invalid email address.")) {
                 System.out.println("Action 8:\n" +
                         "Enter invalid email (for example without @)\n" +
                         "Check that alert appeared\n" +
@@ -221,11 +221,11 @@ public class WilleyTestMain {
                 countCheck++;
             } else {
                 System.out.println("Action 7\n" +
-                        "the alert text is not “Invalid email address.” its " + "“" + alert2.getText() + "”\n" +
+                        "the alert text is not “Invalid email address.” its " + "“" + alertForInvalidEmailField.getText() + "”\n" +
                         "Action 8 FAILED!\n");
                 countFail++;
             }
-            alert2.accept();
+            alertForInvalidEmailField.accept();
         } catch (Exception e) {
             System.out.println("Action 8 FAILED!\n");
             countFail++;
