@@ -5,9 +5,9 @@
     <test name="willeyTest">
         <classes>
             <class name="WilleyTestJunit">
-                <methods>
-                    <include name="Action1"></include>
-                </methods>
+                <!--<methods>-->
+                    <!--<include name="Action1"></include>-->
+                <!--</methods>-->
             </class>
         </classes>
     </test>
