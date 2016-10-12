@@ -17,8 +17,6 @@ import java.util.concurrent.TimeUnit;
 public class WilleyTestMain {
     public static void main(String[] args) {
         WebDriver driver = new ChromeDriver();
-//        WebDriver driver = new RemoteWebDriver("http://localhost:9515", DesiredCapabilities.chrome());
-        driver.get("http://www.google.com");
         int countCheck = 0;
         int countFail = 0;
 
