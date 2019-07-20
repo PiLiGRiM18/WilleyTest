@@ -1,5 +1,5 @@
 # WilleyTest
-Test task to Willey by Selenium Webdriver
+Test task ot job offer for Willey inc.
 
 ### Stack:
 * Java
