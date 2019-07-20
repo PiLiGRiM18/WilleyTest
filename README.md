@@ -1,5 +1,5 @@
 # WilleyTest
-Test task ot job offer for Willey inc.
+Test task to job offer for Willey inc.
 
 ### Stack:
 * Java
